@@ -1,0 +1,26 @@
+{
+
+    "background": {
+      "service_worker": "tag-background.js"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["https://*.artistworks.com/videoexchanges/*"],
+        "js": ["tag.js"]
+      }
+    ],
+  
+    "name": "Tag stuff",
+
+    "description": "Tag stuff",
+  
+    "manifest_version": 3,
+
+
+    "permissions": ["tabs"],
+  
+    "version": "0.1"
+  
+  }
+  
