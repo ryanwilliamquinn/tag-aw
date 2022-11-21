@@ -1,26 +1,30 @@
 {
-
     "background": {
-      "service_worker": "tag-background.js"
+        "service_worker": "background.js"
     },
-  
     "content_scripts": [
-      {
-        "matches": ["https://*.artistworks.com/videoexchanges/*"],
-        "js": ["tag.js"]
-      }
+        {
+            "matches": [
+                "https://*.artistworks.com/*"
+            ],
+            "js": [
+                "scripts/tag-content.js"
+            ]
+        }
     ],
-  
     "name": "Tag stuff",
-
     "description": "Tag stuff",
-  
     "manifest_version": 3,
-
-
-    "permissions": ["tabs"],
-  
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "icons": {
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
     "version": "0.1"
-  
-  }
-  
+}
