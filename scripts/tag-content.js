@@ -13,7 +13,7 @@ function getTitle() {
     }
 }
 
-chrome.runtime.onMessage.addListener(
+browser.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         console.log(sender.tab ?
             "from a content script:" + sender.tab.url :
@@ -21,7 +21,7 @@ chrome.runtime.onMessage.addListener(
         if (request.type === "sendTitle") {
             var title = getTitle();
             console.log("the title: " + title)
-            sendResponse(title);
+            sendResponse(JSON.stringify({title}));
         }
     }
 );
