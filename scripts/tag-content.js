@@ -1,4 +1,4 @@
-console.log("tags.js")
+console.log("tag-content.js")
 
 function getTitle() {
     var nodes = document.querySelectorAll(".playlist-item-title")
@@ -13,7 +13,7 @@ function getTitle() {
     }
 }
 
-browser.runtime.onMessage.addListener(
+chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         console.log(sender.tab ?
             "from a content script:" + sender.tab.url :

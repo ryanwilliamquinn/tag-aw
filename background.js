@@ -1,4 +1,4 @@
-console.log("tag-background.js")
+console.log("background.js")
 
 chrome.action.onClicked.addListener((tab) => {
     console.log("tab clicked?", tab)
