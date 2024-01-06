@@ -17,7 +17,8 @@
     "manifest_version": 3,
     "permissions": [
         "tabs",
-        "activeTab"
+        "activeTab",
+        "declarativeContent"
     ],
     "icons": {
         "32": "images/icon-32.png",
